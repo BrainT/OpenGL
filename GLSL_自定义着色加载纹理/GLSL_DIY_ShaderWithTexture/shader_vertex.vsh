@@ -1,11 +1,9 @@
 attribute vec4 position;
-attribute vec2 textureCoord;
-varying lowp vec2 varyTextureCoord;
+attribute vec2 textCoordinate;
+varying lowp vec2 varyTextCoord;
 
 void main()
 {
-    varyTextureCoord = textureCoord;
+    varyTextCoord = textCoordinate;
     gl_Position = position;
-    
 }
-

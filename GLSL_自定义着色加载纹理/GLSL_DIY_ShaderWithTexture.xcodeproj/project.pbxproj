@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72EEF70624D3CBF0009F788C /* miao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72EEF70524D3CBF0009F788C /* miao.jpg */; };
+		72EEF70924D3FB44009F788C /* TextureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EEF70824D3FB44009F788C /* TextureView.m */; };
 		F72EECD224D3184D00EF9814 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F72EECD124D3184D00EF9814 /* AppDelegate.m */; };
 		F72EECD524D3184D00EF9814 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72EECD424D3184D00EF9814 /* ViewController.m */; };
 		F72EECD824D3184D00EF9814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72EECD624D3184D00EF9814 /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72EEF70524D3CBF0009F788C /* miao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpg; sourceTree = "<group>"; };
+		72EEF70724D3FB44009F788C /* TextureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureView.h; sourceTree = "<group>"; };
+		72EEF70824D3FB44009F788C /* TextureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureView.m; sourceTree = "<group>"; };
 		F72EECCD24D3184D00EF9814 /* GLSL_DIY_ShaderWithTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSL_DIY_ShaderWithTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72EECD024D3184D00EF9814 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F72EECD124D3184D00EF9814 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 				F72EECD124D3184D00EF9814 /* AppDelegate.m */,
 				F72EECD324D3184D00EF9814 /* ViewController.h */,
 				F72EECD424D3184D00EF9814 /* ViewController.m */,
+				72EEF70724D3FB44009F788C /* TextureView.h */,
+				72EEF70824D3FB44009F788C /* TextureView.m */,
+				72EEF70524D3CBF0009F788C /* miao.jpg */,
 				F72EECE824D31A7000EF9814 /* shader_fragment.fsh */,
 				F72EECEA24D31A8700EF9814 /* shader_vertex.vsh */,
 				F72EECD624D3184D00EF9814 /* Main.storyboard */,
@@ -135,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72EECE924D31A7000EF9814 /* shader_fragment.fsh in Resources */,
+				72EEF70624D3CBF0009F788C /* miao.jpg in Resources */,
 				F72EECDD24D3184E00EF9814 /* LaunchScreen.storyboard in Resources */,
 				F72EECDA24D3184E00EF9814 /* Assets.xcassets in Resources */,
 				F72EECD824D3184D00EF9814 /* Main.storyboard in Resources */,
@@ -149,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EEF70924D3FB44009F788C /* TextureView.m in Sources */,
 				F72EECD524D3184D00EF9814 /* ViewController.m in Sources */,
 				F72EECE024D3184E00EF9814 /* main.m in Sources */,
 				F72EECD224D3184D00EF9814 /* AppDelegate.m in Sources */,
