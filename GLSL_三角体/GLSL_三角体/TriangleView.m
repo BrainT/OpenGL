@@ -149,11 +149,16 @@
     glViewport(orgin.x, orgin.y, size.width, size.height);
     
     // 获取顶点着色程序、片元着色程序文件文职
-    
+    NSString * shaderVertex = [[NSBundle mainBundle] pathForResource:@"shaderv" ofType:@"glsl"];
+    NSString * shaderFragment = [[NSBundle mainBundle] pathForResource:@"shaderf" ofType:@"glsl"];
     // 判断program是否存在，否则清空program
+    if (self.mProgram) {
+        glDeleteProgram(self.mProgram);
+        self.mProgram = 0;
+    }
     
     // 加载程序到program中来
-    
+    self.mProgram = [self loadShaderV:shaderVertex frag:shaderFragment];
     // 链接程序与着色器
     
     // 获取链接状态,为true 则glUseProgram
@@ -162,6 +167,19 @@
     
     
     
+}
+
+- (GLuint)loadShaderV:(NSString *)vertextFile frag:(NSString *)fragmentFile
+{
+    // 创建2个临时变量
+    GLuint verShader,FragShader;
+    // 创建program
+    GLuint program = glCreateProgram();
+    
+    // 编译顶点着色程序，片元着色程序
+    
+    
+    return program;
 }
 
 
