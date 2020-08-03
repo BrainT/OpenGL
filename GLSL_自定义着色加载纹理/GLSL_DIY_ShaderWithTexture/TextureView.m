@@ -311,6 +311,16 @@
        参数3：绘制的图片
     */
     CGContextDrawImage(spriteContext, rect, spriteImage);
+    
+    // 平移到x,y
+    CGContextTranslateCTM(spriteContext, rect.origin.x, rect.origin.y);
+    // 再平移图片高度
+    CGContextTranslateCTM(spriteContext, 0, rect.size.height);
+    // 沿y轴翻转
+    CGContextScaleCTM(spriteContext, 1.0, -1.0);
+    // 再平移至原位置
+    CGContextTranslateCTM(spriteContext, -rect.origin.x, -rect.origin.y);
+    CGContextDrawImage(spriteContext, rect, spriteImage);
     // 6.画图完毕后释放上下文
     CGContextRelease(spriteContext);
     // 7.绑定纹理到默认的纹理ID
