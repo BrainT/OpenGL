@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "TriangleView.h"
 @interface ViewController ()
+
 
 @end
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    TriangleView * tView = [[TriangleView alloc] init];
+    tView = (TriangleView *)self.view;
+    
 }
 
 
