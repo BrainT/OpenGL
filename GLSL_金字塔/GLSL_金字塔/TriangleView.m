@@ -139,6 +139,9 @@
     
 }
 
+/**
+ 渲染显示
+ */
 - (void)renderDisplay
 {
     
@@ -178,14 +181,25 @@
     glUseProgram(self.mProgram);
     
     //====准备顶点数据 & 索引数组=====
+//    GLfloat attrArr[] =
+//    {
+//        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上0
+//        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上1
+//        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下2
+//        
+//        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下3
+//        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点4
+//    };
+    
+    // 顶点数据，颜色值，纹理坐标
     GLfloat attrArr[] =
     {
-        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上0
-        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上1
-        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下2
+        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f,       0.0f, 1.0f,//左上
+        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f,       1.0f, 1.0f,//右上
+        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f,       0.0f, 0.0f,//左下
         
-        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下3
-        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点4
+        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f,       1.0f, 0.0f,//右下
+        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f,       0.5f, 0.5f,//顶点
     };
     
     //(2).索引数组
@@ -216,17 +230,28 @@
     glEnableVertexAttribArray(position);
     // 设置读取方式
     NSLog(@"CGFloat %lu\n GLfloat :%lu",sizeof(CGFloat),sizeof(GLfloat));
-    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(CGFloat) * 6, NULL);
+    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 8, NULL);
     
     // =====处理顶点颜色值=====
     GLuint positionColor = glGetAttribLocation(self.mProgram, "positionColor");
     glEnableVertexAttribArray(positionColor);
-    glVertexAttribPointer(positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 6, (float *)NULL + 3);
+    glVertexAttribPointer(positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 8, (GLfloat *)NULL + 3);
+
+    // 处理纹理数据
+    GLuint textCoor = glGetAttribLocation(self.mProgram, "textCoordinate");
+    glEnableVertexAttribArray(textCoor);
+    glVertexAttribPointer(textCoor, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 8 ,(GLfloat *)NULL + 6);
+    // 加载为例
+    [self loadTexture:@"miao.jpg"];
+    /**
+     GLint location,获取纹理位置
+     GLint x，从0开始，有几个纹理，就传第几个纹理
+     */
+    glUniform1i(glGetUniformLocation(self.mProgram, "colorMap"), 0);
     
     // 根据program 找到 projectionMatrix、modelViewMatrix
     GLuint projectionMatrix = glGetUniformLocation(self.mProgram, "projectionMatrix");
     GLuint modelViewMatrix = glGetUniformLocation(self.mProgram, "modelViewMatrix");
-    
     
     
     float width = self.frame.size.width;
@@ -355,9 +380,87 @@
     
     // 把b着色器源代码编译成目标代码
     glCompileShader(*shader);
-    
 
 }
+
+/// 加载纹理
+/// @param imageName 纹理名称
+- (GLuint)loadTexture:(NSString *)imageName
+{
+    // 1.将UIImage转化为CGImageRef
+    CGImageRef spriteImage = [UIImage imageNamed:imageName].CGImage;
+    if (!spriteImage) {
+        NSLog(@"load image failed");
+        return 1;
+    }
+    
+    // 2.获得图片大小，尺寸
+    size_t width = CGImageGetWidth(spriteImage);
+    size_t height = CGImageGetHeight(spriteImage);
+    // 获取图片字节数，其中RGBA占4个八位 byteData = width * height * 4
+    GLubyte * spriteData = (GLubyte *)calloc(width * height * 4, sizeof(GLubyte));
+    
+    /**
+     3.创建上下文
+     para1: data,指向要渲染的绘制图像的内存地址
+     para2: width,bitmap的宽度，单位为像素
+     para3: height,bitmap的高度，单位为像素
+     para4: bitPerComponent,内存中像素的每个组件的位数，比如32位RGBA，就设置为8
+     para5: bytesPerRow,bitmap的没一行的内存所占的比特数
+     para6: colorSpace,bitmap上使用的颜色空间  kCGImageAlphaPremultipliedLast：RGBA
+     
+     */
+    CGContextRef spriteContext = CGBitmapContextCreate(spriteData, width, height, 8, width * 4, CGImageGetColorSpace(spriteImage), kCGImageAlphaPremultipliedLast);
+    // 4.在CGContextRef 将图片绘制出来
+    
+    CGRect rect = CGRectMake(0, 0, width, height);
+    
+    // 5.使用默认方式绘制
+    /**
+     CGContextDrawImage 使用的是Core Graphics框架，坐标系与UIKit 不一样。UIKit框架的原点在屏幕的左上角，Core Graphics框架的原点在屏幕的左下角。
+     CGContextDrawImage
+     参数1：绘图上下文
+     参数2：rect坐标
+     参数3：绘制的图片
+     */
+    CGContextDrawImage(spriteContext, rect, spriteImage);
+    
+    // 平移到x,y
+    CGContextTranslateCTM(spriteContext, rect.origin.x, rect.origin.y);
+    // 再平移图片高度
+    CGContextTranslateCTM(spriteContext, 0, rect.size.height);
+    // 沿y轴翻转
+    CGContextScaleCTM(spriteContext, 1.0, -1.0);
+    // 再平移至原位置
+    CGContextTranslateCTM(spriteContext, -rect.origin.x, -rect.origin.y);
+    CGContextDrawImage(spriteContext, rect, spriteImage);
+    // 6.画图完毕后释放上下文
+    CGContextRelease(spriteContext);
+    // 7.绑定纹理到默认的纹理ID
+    glBindTexture(GL_TEXTURE_2D, 0);
+    // 8.设置纹理属性
+    /**
+     参数1：纹理纬度
+     参数2：线性过滤、为s，t坐标设置模式
+     参数3：wrapMode，环绕模式
+     */
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    float fWidht = width,fHeight = height;
+    
+    // 9.载入纹理
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, fWidht, fHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
+    
+    // 10.释放spriteData
+    free(spriteData);
+    return 0;
+    
+    
+}
+
 - (void)gcdTimer
 {
     double seconds = 0.1;
