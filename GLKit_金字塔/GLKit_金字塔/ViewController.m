@@ -40,8 +40,9 @@
     // 初始化上下文
     [self initContext];
 
+    // 绘制显示
     [self renderDisplay];
-    
+    // 开启定时器
     [self gcdTimer];
 }
 - (void)initContext
@@ -68,6 +69,16 @@
 
 - (void)renderDisplay
 {
+//    单使用颜色渐变时，替换顶点数据 + 设置读取方式更改步长
+//    GLfloat attrArr[] =
+//    {
+//        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上
+//        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上
+//        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下
+//
+//        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下
+//        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点
+//    };
     // 顶点数据，颜色值，纹理坐标
     GLfloat attrArr[] =
     {
@@ -114,8 +125,6 @@
     
     [self loadTexture];
     
-    
-    
 }
 - (void)loadTexture
 {
@@ -129,7 +138,6 @@
     self.mEffect = [[GLKBaseEffect alloc] init];
     self.mEffect.texture2d0.enabled = GL_TRUE;
     self.mEffect.texture2d0.name = textureInfo.name;
-//    self.mEffect.texture2d0.target = textureInfo.target;
     
     CGSize size = self.view.bounds.size;
     float aspect = fabs(size.width/size.height);
