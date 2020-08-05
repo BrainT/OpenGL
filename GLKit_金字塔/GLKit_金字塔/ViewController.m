@@ -46,6 +46,7 @@
     [self setGCDTimer];
 }
 
+/// 初始化上下文
 - (void)initContext
 {
     self.view.backgroundColor = [UIColor whiteColor];
