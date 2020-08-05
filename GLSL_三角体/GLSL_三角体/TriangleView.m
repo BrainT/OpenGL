@@ -381,6 +381,8 @@
 - (IBAction)Z_Clicked:(id)sender {
     boolZ = !boolZ;
 }
+
+/// 刷新角度重绘
 - (void)refreshAngle
 {
     // 更新度数
