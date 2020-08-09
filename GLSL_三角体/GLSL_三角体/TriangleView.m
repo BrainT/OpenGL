@@ -216,7 +216,7 @@
     glEnableVertexAttribArray(position);
     // 设置读取方式
     NSLog(@"CGFloat %lu\n GLfloat :%lu",sizeof(CGFloat),sizeof(GLfloat));
-    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(CGFloat) * 6, NULL);
+    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 6, NULL);
     
     // =====处理顶点颜色值=====
     GLuint positionColor = glGetAttribLocation(self.mProgram, "positionColor");

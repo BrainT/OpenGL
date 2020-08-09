@@ -18,6 +18,7 @@
 		F78A59D224D70732003E7938 /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F78A59D124D70732003E7938 /* TriangleView.m */; };
 		F78A59DA24D7075A003E7938 /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = F78A59D424D7075A003E7938 /* GLESMath.c */; };
 		F78A59DB24D7075A003E7938 /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F78A59D724D7075A003E7938 /* GLESUtils.m */; };
+		F7B4D41124D9B6C000604207 /* miao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7B4D41024D9B6C000604207 /* miao.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F78A59D724D7075A003E7938 /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
 		F78A59D824D7075A003E7938 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
 		F78A59D924D7075A003E7938 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		F7B4D41024D9B6C000604207 /* miao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = miao.jpg; path = "../../GLSL_自定义着色加载纹理/GLSL_DIY_ShaderWithTexture/miao.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				F78A59CC24D6FCBD003E7938 /* shaderv.glsl */,
 				F78A59CE24D6FCC8003E7938 /* shaderf.glsl */,
 				F78A59BC24D6F70C003E7938 /* Main.storyboard */,
+				F7B4D41024D9B6C000604207 /* miao.jpg */,
 				F78A59BF24D6F70D003E7938 /* Assets.xcassets */,
 				F78A59C124D6F70D003E7938 /* LaunchScreen.storyboard */,
 				F78A59C424D6F70D003E7938 /* Info.plist */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78A59C324D6F70D003E7938 /* LaunchScreen.storyboard in Resources */,
+				F7B4D41124D9B6C000604207 /* miao.jpg in Resources */,
 				F78A59CD24D6FCBD003E7938 /* shaderv.glsl in Resources */,
 				F78A59C024D6F70D003E7938 /* Assets.xcassets in Resources */,
 				F78A59BE24D6F70C003E7938 /* Main.storyboard in Resources */,
