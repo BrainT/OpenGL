@@ -38,14 +38,17 @@
 
 @implementation TriangleView
 {
+    // X Y Z 旋转角度
     float xDegree;
     float yDegree;
     float zDegree;
+    // X Y Z 是否旋转
     BOOL boolX;
     BOOL boolY;
     BOOL boolZ;
-    dispatch_queue_t timer;
-    NSTimer * mTimer;
+    // GCD
+    dispatch_source_t timer;
+    
 }
 
 /*
@@ -180,7 +183,7 @@
     NSLog(@"program link success");
     glUseProgram(self.mProgram);
     
-    //====准备顶点数据 & 索引数组=====
+    //==== 无纹理： 准备顶点数据 & 索引数组=====
 //    GLfloat attrArr[] =
 //    {
 //        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上0
@@ -191,7 +194,7 @@
 //        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点4
 //    };
     
-    // 顶点数据，颜色值，纹理坐标
+    // 有纹理： 顶点数据，颜色值，纹理坐标
     GLfloat attrArr[] =
     {
         -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f,       0.0f, 1.0f,//左上
@@ -237,7 +240,8 @@
     glEnableVertexAttribArray(positionColor);
     glVertexAttribPointer(positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 8, (GLfloat *)NULL + 3);
 
-    // 处理纹理数据
+    // ======有纹理加载：======
+    //  处理纹理数据
     GLuint textCoor = glGetAttribLocation(self.mProgram, "textCoordinate");
     glEnableVertexAttribArray(textCoor);
     glVertexAttribPointer(textCoor, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 8 ,(GLfloat *)NULL + 6);
