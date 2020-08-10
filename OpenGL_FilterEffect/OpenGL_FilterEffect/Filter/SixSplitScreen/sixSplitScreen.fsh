@@ -18,8 +18,7 @@ void main()
     }else{
         var_xy.x = var_xy.x - 0.25;
     }
-   
-    
+
     gl_FragColor = texture2D(un_texture,vec2( var_xy.x, var_xy.y));
     
 }

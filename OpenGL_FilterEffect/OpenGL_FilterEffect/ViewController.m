@@ -195,6 +195,7 @@ typedef struct {
     self.vertexBuffer = vertexBuffer;
 
 }
+
 /**
  加载纹理，
 
@@ -271,10 +272,12 @@ typedef struct {
     // 返回纹理id
     return textureID;
 }
-- (void)setupNormalShaderProgram
-{
-    
-}
+
+/**
+ 设置着色器programID
+
+ @param nameStr 着色程序文件名
+ */
 -(void)setupShaderProgramWithName:(NSString *)nameStr
 {
     // 获取着色器program
