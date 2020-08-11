@@ -19,7 +19,9 @@
     
     self.backgroundColor = [UIColor whiteColor];
     NSArray * btnArr = @[@"无",@"二分屏",@"三分屏",
-                         @"四分屏",@"六分屏",@"九分屏",];
+                         @"四分屏",@"六分屏",@"九分屏",
+                         @"☐马赛克",@"⎔马赛克",@"△马赛克",
+                         ];
     CGFloat btnW = 100;
     CGFloat btnH = 40;
     CGFloat SC_Width = self.frame.size.width;

@@ -22,6 +22,9 @@
 		F794391924E02E2A001972B0 /* normalShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F794391824E02E2A001972B0 /* normalShader.fsh */; };
 		F794391B24E02E3F001972B0 /* normalShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F794391A24E02E3F001972B0 /* normalShader.vsh */; };
 		F794391D24E0395F001972B0 /* miao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F794391C24E0395F001972B0 /* miao.jpg */; };
+		F7A3079824E2E8B10067CF39 /* HexagonMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079524E2E8B10067CF39 /* HexagonMosaic.fsh */; };
+		F7A3079924E2E8B10067CF39 /* TriangleMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */; };
+		F7A3079B24E2E8C90067CF39 /* SquareMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079A24E2E8C80067CF39 /* SquareMosaic.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		F794391824E02E2A001972B0 /* normalShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = normalShader.fsh; sourceTree = "<group>"; };
 		F794391A24E02E3F001972B0 /* normalShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = normalShader.vsh; sourceTree = "<group>"; };
 		F794391C24E0395F001972B0 /* miao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miao.jpg; sourceTree = "<group>"; };
+		F7A3079524E2E8B10067CF39 /* HexagonMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HexagonMosaic.fsh; sourceTree = "<group>"; };
+		F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TriangleMosaic.fsh; sourceTree = "<group>"; };
+		F7A3079A24E2E8C80067CF39 /* SquareMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SquareMosaic.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,9 @@
 		F794391624E02DD5001972B0 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				F7A3079424E2E8B10067CF39 /* HexagonMosaic */,
+				F7A3079624E2E8B10067CF39 /* TriangleMosaic */,
+				F7A3079324E2E8050067CF39 /* SquareMosaic */,
 				72EEE46324E12B15007727AB /* NineSplitScreen */,
 				72EEE46524E12B16007727AB /* SixSplitScreen */,
 				72EEE46724E12B16007727AB /* FourSplitScreen */,
@@ -154,6 +163,30 @@
 				F794391A24E02E3F001972B0 /* normalShader.vsh */,
 			);
 			path = Normal;
+			sourceTree = "<group>";
+		};
+		F7A3079324E2E8050067CF39 /* SquareMosaic */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3079A24E2E8C80067CF39 /* SquareMosaic.fsh */,
+			);
+			path = SquareMosaic;
+			sourceTree = "<group>";
+		};
+		F7A3079424E2E8B10067CF39 /* HexagonMosaic */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3079524E2E8B10067CF39 /* HexagonMosaic.fsh */,
+			);
+			path = HexagonMosaic;
+			sourceTree = "<group>";
+		};
+		F7A3079624E2E8B10067CF39 /* TriangleMosaic */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */,
+			);
+			path = TriangleMosaic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +250,13 @@
 				72EEE46224E1260C007727AB /* twoSplitScreen.fsh in Resources */,
 				F794390A24E021AE001972B0 /* LaunchScreen.storyboard in Resources */,
 				72EEE46E24E12B16007727AB /* threeSplitScreen.fsh in Resources */,
+				F7A3079924E2E8B10067CF39 /* TriangleMosaic.fsh in Resources */,
 				F794391B24E02E3F001972B0 /* normalShader.vsh in Resources */,
 				F794391D24E0395F001972B0 /* miao.jpg in Resources */,
+				F7A3079824E2E8B10067CF39 /* HexagonMosaic.fsh in Resources */,
 				F794390724E021AE001972B0 /* Assets.xcassets in Resources */,
 				72EEE46D24E12B16007727AB /* fourSplitScreen.fsh in Resources */,
+				F7A3079B24E2E8C90067CF39 /* SquareMosaic.fsh in Resources */,
 				72EEE46C24E12B16007727AB /* sixSplitScreen.fsh in Resources */,
 				F794391924E02E2A001972B0 /* normalShader.fsh in Resources */,
 				F794390524E021AE001972B0 /* Main.storyboard in Resources */,

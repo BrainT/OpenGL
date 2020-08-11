@@ -50,7 +50,7 @@ typedef struct {
 - (void)addFilterView
 {
     
-    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 150, self.view.frame.size.width, 130)];
+    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 280, self.view.frame.size.width, 260)];
     [self.view addSubview:filterView];
     __weak typeof(self) weakSelf = self;
     filterView.filterBtnBlock = ^(NSInteger tag) {
@@ -86,7 +86,15 @@ typedef struct {
         case 5:
             [self setupShaderProgramWithName:@"nineSplitScreen"];
             break;
-            
+        case 6:
+            [self setupShaderProgramWithName:@"SquareMosaic"];
+            break;
+        case 7:
+            [self setupShaderProgramWithName:@"sixSplitScreen"];
+            break;
+        case 8:
+            [self setupShaderProgramWithName:@"nineSplitScreen"];
+            break;
         default:
             break;
     }
