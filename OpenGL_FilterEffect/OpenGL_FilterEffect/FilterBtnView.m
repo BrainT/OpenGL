@@ -21,6 +21,7 @@
     NSArray * btnArr = @[@"无",@"二分屏",@"三分屏",
                          @"四分屏",@"六分屏",@"九分屏",
                          @"☐马赛克",@"⎔马赛克",@"△马赛克",
+                         @"灰度滤镜",@"颠倒滤镜"
                          ];
     CGFloat btnW = 100;
     CGFloat btnH = 40;
@@ -44,7 +45,7 @@
 }
 - (void)btnClicked:(UIButton *)btn
 {
-    for (int i = 0; i < 6; i ++) {
+    for (int i = 0; i < 11; i ++) {
         UIButton * button = [self viewWithTag:100 + i];
         if (button.tag == btn.tag) {
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

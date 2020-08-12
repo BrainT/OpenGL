@@ -50,7 +50,7 @@ typedef struct {
 - (void)addFilterView
 {
     
-    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 280, self.view.frame.size.width, 260)];
+    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 280, self.view.frame.size.width, 280)];
     [self.view addSubview:filterView];
     __weak typeof(self) weakSelf = self;
     filterView.filterBtnBlock = ^(NSInteger tag) {
@@ -65,7 +65,9 @@ typedef struct {
 - (void)filterBtnClicked:(NSInteger)btnTag
 {
 //    NSArray * btnArr = @[@"无",@"二分屏",@"三分屏",
-//                         @"四分屏",@"六分屏",@"九分屏",];
+//                @"四分屏",@"六分屏",@"九分屏",
+//                @"☐马赛克",@"⎔马赛克",@"△马赛克",
+//                ];
     NSLog(@"%ld",btnTag);
     switch (btnTag - 100) {
         case 0:
@@ -87,13 +89,16 @@ typedef struct {
             [self setupShaderProgramWithName:@"nineSplitScreen"];
             break;
         case 6:
+            // 矩形形马赛克
             [self setupShaderProgramWithName:@"SquareMosaic"];
             break;
         case 7:
-            [self setupShaderProgramWithName:@"sixSplitScreen"];
+            // 六边形马赛克
+            [self setupShaderProgramWithName:@"HexagonMosaic"];
             break;
         case 8:
-            [self setupShaderProgramWithName:@"nineSplitScreen"];
+            // 三角形马赛克
+            [self setupShaderProgramWithName:@"TriangleMosaic"];
             break;
         default:
             break;

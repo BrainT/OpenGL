@@ -4,7 +4,7 @@ uniform sampler2D un_texture;
 varying vec2 var_textureCoords;
 
 const vec2 TextureSize = vec2(414.0,414.0);
-const vec2 MosaicSize = vec2(19.0,8.0);
+const vec2 MosaicSize = vec2(8.0,8.0);
 
 void main()
 {
