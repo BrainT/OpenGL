@@ -21,7 +21,8 @@
     NSArray * btnArr = @[@"无",@"二分屏",@"三分屏",
                          @"四分屏",@"六分屏",@"九分屏",
                          @"☐马赛克",@"⎔马赛克",@"△马赛克",
-                         @"灰度滤镜",@"颠倒滤镜"
+                         @"灰度滤镜",@"缩放滤镜",@"灵魂出窍",
+                         @"抖动滤镜",@"闪白滤镜",@"毛刺滤镜",@"幻觉滤镜"
                          ];
     CGFloat btnW = 100;
     CGFloat btnH = 40;
@@ -32,7 +33,7 @@
         UIButton * filterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [filterBtn setTitle:btnArr[i] forState:UIControlStateNormal];
 
-        filterBtn.frame = CGRectMake(Gap +( Gap + btnW) *(i % 3), (i / 3) * (btnH + 20) + 10 , btnW, btnH);
+        filterBtn.frame = CGRectMake(Gap +( Gap + btnW) *(i % 3), (i / 3) * (btnH + 5) , btnW, btnH);
         [filterBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [filterBtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         filterBtn.tag = 100 + i;

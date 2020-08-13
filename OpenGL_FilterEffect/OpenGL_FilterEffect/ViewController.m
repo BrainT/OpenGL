@@ -101,6 +101,10 @@ typedef struct {
             [self setupShaderProgramWithName:@"TriangleMosaic"];
             break;
         default:
+            // 灰度滤镜
+            [self setupShaderProgramWithName:@"GrayFilter"];
+            break;
+        
             break;
     }
 }
