@@ -12,6 +12,7 @@
 		72EEE46C24E12B16007727AB /* sixSplitScreen.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 72EEE46624E12B16007727AB /* sixSplitScreen.fsh */; };
 		72EEE46D24E12B16007727AB /* fourSplitScreen.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 72EEE46824E12B16007727AB /* fourSplitScreen.fsh */; };
 		72EEE46E24E12B16007727AB /* threeSplitScreen.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 72EEE46A24E12B16007727AB /* threeSplitScreen.fsh */; };
+		72EEE47024E63AC6007727AB /* ZoomFilter.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 72EEE46F24E63AC5007727AB /* ZoomFilter.vsh */; };
 		F79438FF24E021AE001972B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F79438FE24E021AE001972B0 /* AppDelegate.m */; };
 		F794390224E021AE001972B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F794390124E021AE001972B0 /* ViewController.m */; };
 		F794390524E021AE001972B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F794390324E021AE001972B0 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		72EEE46624E12B16007727AB /* sixSplitScreen.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = sixSplitScreen.fsh; sourceTree = "<group>"; };
 		72EEE46824E12B16007727AB /* fourSplitScreen.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fourSplitScreen.fsh; sourceTree = "<group>"; };
 		72EEE46A24E12B16007727AB /* threeSplitScreen.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = threeSplitScreen.fsh; sourceTree = "<group>"; };
+		72EEE46F24E63AC5007727AB /* ZoomFilter.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ZoomFilter.vsh; sourceTree = "<group>"; };
 		F79438FA24E021AE001972B0 /* OpenGL_FilterEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL_FilterEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79438FD24E021AE001972B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F79438FE24E021AE001972B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CB3B1E24E5A88C007BC3BC /* ZoomFilter.fsh */,
+				72EEE46F24E63AC5007727AB /* ZoomFilter.vsh */,
 			);
 			path = ZoomFilter;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				F7CB3B1F24E5A88C007BC3BC /* ZoomFilter.fsh in Resources */,
 				F7A3079824E2E8B10067CF39 /* HexagonMosaic.fsh in Resources */,
 				F794390724E021AE001972B0 /* Assets.xcassets in Resources */,
+				72EEE47024E63AC6007727AB /* ZoomFilter.vsh in Resources */,
 				72EEE46D24E12B16007727AB /* fourSplitScreen.fsh in Resources */,
 				F7A3079B24E2E8C90067CF39 /* SquareMosaic.fsh in Resources */,
 				72EEE46C24E12B16007727AB /* sixSplitScreen.fsh in Resources */,

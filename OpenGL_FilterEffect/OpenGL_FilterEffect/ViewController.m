@@ -50,7 +50,7 @@ typedef struct {
 - (void)addFilterView
 {
     
-    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 280, self.view.frame.size.width, 280)];
+    FilterBtnView * filterView = [[FilterBtnView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 300, self.view.frame.size.width, 300)];
     [self.view addSubview:filterView];
     __weak typeof(self) weakSelf = self;
     filterView.filterBtnBlock = ^(NSInteger tag) {
@@ -65,47 +65,37 @@ typedef struct {
 - (void)filterBtnClicked:(NSInteger)btnTag
 {
 //    NSArray * btnArr = @[@"无",@"二分屏",@"三分屏",
-//                @"四分屏",@"六分屏",@"九分屏",
-//                @"☐马赛克",@"⎔马赛克",@"△马赛克",
-//                ];
+//                        @"四分屏",@"六分屏",@"九分屏",
+//                        @"☐马赛克",@"⎔马赛克",@"△马赛克",
+//                        @"灰度滤镜",@"缩放滤镜",@"灵魂出窍",
+//                        @"抖动滤镜",@"闪白滤镜",@"毛刺滤镜",@"幻觉滤镜"
+//                        ];
     NSLog(@"%ld",btnTag);
-    switch (btnTag - 100) {
-        case 0:
-            [self setupShaderProgramWithName:@"normalShader"];
-            break;
-        case 1:
-            [self setupShaderProgramWithName:@"twoSplitScreen"];
-            break;
-        case 2:
-            [self setupShaderProgramWithName:@"threeSplitScreen"];
-            break;
-        case 3:
-            [self setupShaderProgramWithName:@"fourSplitScreen"];
-            break;
-        case 4:
-            [self setupShaderProgramWithName:@"sixSplitScreen"];
-            break;
-        case 5:
-            [self setupShaderProgramWithName:@"nineSplitScreen"];
-            break;
-        case 6:
-            // 矩形形马赛克
-            [self setupShaderProgramWithName:@"SquareMosaic"];
-            break;
-        case 7:
-            // 六边形马赛克
-            [self setupShaderProgramWithName:@"HexagonMosaic"];
-            break;
-        case 8:
-            // 三角形马赛克
-            [self setupShaderProgramWithName:@"TriangleMosaic"];
-            break;
-        default:
-            // 灰度滤镜
-            [self setupShaderProgramWithName:@"GrayFilter"];
-            break;
+    NSArray * fshStrArr = @[@"normalShader", // 原图纹理加载
+                            @"twoSplitScreen", // 二分屏
+                            @"threeSplitScreen", // 三分屏
+                            @"fourSplitScreen", // 四分屏
+                            @"sixSplitScreen", // 六分屏
+                            @"nineSplitScreen", // 九分屏
+                            @"SquareMosaic",  // 正方形形马赛克
+                            @"HexagonMosaic", // 六边形马赛克
+                            @"TriangleMosaic", // 三角形马赛克
+                            @"GrayFilter", // 灰度滤镜
+                            @"ZoomFilter", // 缩放滤镜
+                            @"SoulOutFilter", // 灵魂出窍
+                            @"ShakeFilter", // 抖动滤镜
+                            @"FlashFilter", // 闪白滤镜
+                            @"BurrFilter",// 毛刺滤镜
+                            @"VertigoFilter"]; // 眩晕滤镜
+    for (int i = 0; i < fshStrArr.count; i ++) {
         
-            break;
+        if (btnTag == i + 100) {
+            
+            [self setupShaderProgramWithName:fshStrArr[i]];
+            
+            [self startFilerAnimation];
+        }
+        
     }
 }
 
@@ -173,7 +163,7 @@ typedef struct {
     
     // 创建CAEAGLayer图层
     self.mEagaLayer = [[CAEAGLLayer alloc] init];
-    self.mEagaLayer.frame = CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.width);
+    self.mEagaLayer.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width);
     self.mEagaLayer.contentsScale = [[UIScreen mainScreen] scale];
     [self.view.layer addSublayer:self.mEagaLayer];
     
@@ -373,9 +363,10 @@ typedef struct {
 {
     // 1.获取shader的path
     // 使用2、3、4、6、9分屏，其顶点着色程序是不变的，故可使用用一个normalShader.vsh 文件
-    shaderName = shaderType == GL_VERTEX_SHADER ? @"normalShader" : shaderName;
+    if (![shaderName isEqualToString:@"ZoomFilter"]) {
+        shaderName = shaderType == GL_VERTEX_SHADER ? @"normalShader" : shaderName;
+    }
     NSString * shaderPath = [[NSBundle mainBundle] pathForResource:shaderName ofType:shaderType == GL_VERTEX_SHADER ? @"vsh" : @"fsh"];
-
     
     NSString * shaderString = [NSString stringWithContentsOfFile:shaderPath encoding:NSUTF8StringEncoding error:nil];
     if (!shaderString) {

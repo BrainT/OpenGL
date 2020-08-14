@@ -52,7 +52,7 @@ void main()
         curTexelCoordReslut = curTexelCoord2;
     }
     
-    float agnleV = atan((texCoordX - curTexelCoordReslut.x) / (texCoordY - curTexelCoordReslut.y));
+    float agnleV = atan((texCoordX - curTexelCoordReslut.x) /(texCoordY - curTexelCoordReslut.y) );
     
     vec2 area1 = vec2(curTexelCoordReslut.x, curTexelCoordReslut.y + length * TR / 2.0);
     vec2 area2 = vec2(curTexelCoordReslut.x + length / 2.0, curTexelCoordReslut.y - length * TR / 2.0);
@@ -61,19 +61,40 @@ void main()
     vec2 area5 = vec2(curTexelCoordReslut.x - length / 2.0, curTexelCoordReslut.y - length * TR / 2.0);
     vec2 area6 = vec2(curTexelCoordReslut.x - length / 2.0, curTexelCoordReslut.y + length * TR / 2.0);
 
-    if (agnleV >= PI6 && agnleV < PI6 * 3.0) {
-      curTexelCoordReslut = area1;
-    }else if (agnleV >= PI6 * 3.0 && agnleV < PI6 * 5.0){
-      curTexelCoordReslut = area2;
-    }else if ((agnleV >= PI6 * 5.0 && agnleV <= PI6 * 6.0) || (agnleV < -PI6 * 5.0 && agnleV > -PI6 * 6.0)){
-      curTexelCoordReslut = area3;
-    }else if (agnleV < -PI6 * 3.0 && agnleV >= -PI6 * 5.0){
-      curTexelCoordReslut = area4;
-    }else if (agnleV <= -PI6 && agnleV > -PI6 * 3.0){
-      curTexelCoordReslut = area5;
-    }else if (agnleV > -PI6 && agnleV < PI6){
-      curTexelCoordReslut = area6;
-    }
+//    vec2 area1 = vec2(curTexelCoordReslut.x, curTexelCoordReslut.y - MosaicSize * TR / 2.0);
+//    vec2 area2 = vec2(curTexelCoordReslut.x + MosaicSize / 2.0, curTexelCoordReslut.y - MosaicSize * TR / 2.0);
+//    vec2 area3 = vec2(curTexelCoordReslut.x + MosaicSize / 2.0, curTexelCoordReslut.y + MosaicSize * TR / 2.0);
+//    vec2 area4 = vec2(curTexelCoordReslut.x, curTexelCoordReslut.y + MosaicSize * TR / 2.0);
+//    vec2 area5 = vec2(curTexelCoordReslut.x - MosaicSize / 2.0, curTexelCoordReslut.y + MosaicSize * TR / 2.0);
+//    vec2 area6 = vec2(curTexelCoordReslut.x - MosaicSize / 2.0, curTexelCoordReslut.y - MosaicSize * TR / 2.0);
+
+//    if (agnleV >= PI6 && agnleV < PI6 * 3.0) {
+//      curTexelCoordReslut = area1;
+//    }else if (agnleV >= PI6 * 3.0 && agnleV < PI6 * 5.0){
+//      curTexelCoordReslut = area2;
+//    }else if ((agnleV >= PI6 * 5.0 && agnleV <= PI6 * 6.0) || (agnleV < -PI6 * 5.0 && agnleV > -PI6 * 6.0)){
+//      curTexelCoordReslut = area3;
+//    }else if (agnleV < -PI6 * 3.0 && agnleV >= -PI6 * 5.0){
+//      curTexelCoordReslut = area4;
+//    }else if (agnleV <= -PI6 && agnleV > -PI6 * 3.0){
+//      curTexelCoordReslut = area5;
+//    }else if (agnleV > -PI6 && agnleV < PI6){
+//      curTexelCoordReslut = area6;
+//    }
+
+    if (agnleV >= PI6 * 2 && agnleV < PI6 * 5.0) {
+     curTexelCoordReslut = area1;
+   }else if (agnleV >= 0 && agnleV < PI6 * 2.0){
+     curTexelCoordReslut = area2;
+   }else if ((agnleV < -PI6 * 5.0 && agnleV > -PI6 * 6.0)){
+     curTexelCoordReslut = area3;
+   }else if (agnleV < -PI6 * 3.0 && agnleV >= -PI6 * 5.0){
+     curTexelCoordReslut = area4;
+   }else if (agnleV <= -PI6 && agnleV > -PI6 * 3.0){
+     curTexelCoordReslut = area5;
+   }else if (agnleV > -PI6 && agnleV < PI6){
+     curTexelCoordReslut = area6;
+   }
 
     gl_FragColor = texture2D(un_texture, curTexelCoordReslut);
 

@@ -2,15 +2,23 @@
 precision highp float;
 uniform sampler2D un_texture;
 varying vec2 var_textureCoords;
-const highp vec3 grayColor = vec3(0.2125,0.7154,0.0721);
+
+uniform float Time;
+
+const float PI = 3.141593653589793;
 
 void main()
 {
+    float duration = 0.4;
+    float timeInterval = mod(Time,duration);
     
-    vec4 textureColor = texture2D(un_texture,var_textureCoords);
+    vec4 whiteTexel = vec4(1.0,1.0,1.0,1.0);
     
-    float luminance  = dot(textureColor.rgb,grayColor);
+    float amplitude = abs(sin(timeInterval * ( PI / duration)));
     
-    gl_FragColor = vec4(vec3(luminance),1.0);
+    vec4 texelColor = texture2D(un_texture,var_textureCoords);
+    
+    
+    gl_FragColor = (1.0 - amplitude) * texelColor + amplitude * whiteTexel;
     
 }

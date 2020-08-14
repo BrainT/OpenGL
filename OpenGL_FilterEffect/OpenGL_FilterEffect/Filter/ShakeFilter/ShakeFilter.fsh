@@ -1,16 +1,32 @@
 
 precision highp float;
+
 uniform sampler2D un_texture;
 varying vec2 var_textureCoords;
-const highp vec3 grayColor = vec3(0.2125,0.7154,0.0721);
+
+uniform float Time;
+
 
 void main()
 {
+    float duration = 0.4;
+    float offset = 0.02;
+    float maxSize = 1.5;
     
-    vec4 textureColor = texture2D(un_texture,var_textureCoords);
+    float progress = mod(Time,duration);
+    vec2 offsetCoord = vec2(offset,offset) * progress;
     
-    float luminance  = dot(textureColor.rgb,grayColor);
+    float size = 1.0 + (maxSize - 1.0) * progress;
     
-    gl_FragColor = vec4(vec3(luminance),1.0);
+    vec2 sizeTextureCoord = vec2(0.5, 0.5) + (var_textureCoords - vec2(0.5,0.5)) / size;
+    
+    vec4 colorTexelR = texture2D(un_texture, sizeTextureCoord + offsetCoord);
+    
+    vec4 colorTexelG = texture2D(un_texture, sizeTextureCoord - offsetCoord);
+    
+    vec4 colorTexel = texture2D(un_texture, sizeTextureCoord);
+    
+    gl_FragColor = vec4(colorTexelR.r , colorTexelG.g, colorTexel.b, colorTexel.a);
+    
     
 }
