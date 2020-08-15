@@ -26,6 +26,7 @@
 		F7A3079824E2E8B10067CF39 /* HexagonMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079524E2E8B10067CF39 /* HexagonMosaic.fsh */; };
 		F7A3079924E2E8B10067CF39 /* TriangleMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */; };
 		F7A3079B24E2E8C90067CF39 /* SquareMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7A3079A24E2E8C80067CF39 /* SquareMosaic.fsh */; };
+		F7B722F724E82B5000CF7616 /* VertigoFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7B722F624E82B5000CF7616 /* VertigoFilter.fsh */; };
 		F7CB3B1C24E59D76007BC3BC /* GrayFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7CB3B1B24E59D76007BC3BC /* GrayFilter.fsh */; };
 		F7CB3B1F24E5A88C007BC3BC /* ZoomFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7CB3B1E24E5A88C007BC3BC /* ZoomFilter.fsh */; };
 		F7CB3B2824E5A8C1007BC3BC /* BurrFilter.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F7CB3B2124E5A8C1007BC3BC /* BurrFilter.fsh */; };
@@ -59,6 +60,7 @@
 		F7A3079524E2E8B10067CF39 /* HexagonMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = HexagonMosaic.fsh; sourceTree = "<group>"; };
 		F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TriangleMosaic.fsh; sourceTree = "<group>"; };
 		F7A3079A24E2E8C80067CF39 /* SquareMosaic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SquareMosaic.fsh; sourceTree = "<group>"; };
+		F7B722F624E82B5000CF7616 /* VertigoFilter.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertigoFilter.fsh; sourceTree = "<group>"; };
 		F7CB3B1B24E59D76007BC3BC /* GrayFilter.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GrayFilter.fsh; sourceTree = "<group>"; };
 		F7CB3B1E24E5A88C007BC3BC /* ZoomFilter.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ZoomFilter.fsh; sourceTree = "<group>"; };
 		F7CB3B2124E5A8C1007BC3BC /* BurrFilter.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BurrFilter.fsh; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		F794391624E02DD5001972B0 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				F7B722F524E82B5000CF7616 /* VertigoFilter */,
 				F7CB3B2024E5A8C1007BC3BC /* BurrFilter */,
 				F7CB3B2424E5A8C1007BC3BC /* FlashFilter */,
 				F7CB3B2624E5A8C1007BC3BC /* ShakeFilter */,
@@ -207,6 +210,14 @@
 				F7A3079724E2E8B10067CF39 /* TriangleMosaic.fsh */,
 			);
 			path = TriangleMosaic;
+			sourceTree = "<group>";
+		};
+		F7B722F524E82B5000CF7616 /* VertigoFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F7B722F624E82B5000CF7616 /* VertigoFilter.fsh */,
+			);
+			path = VertigoFilter;
 			sourceTree = "<group>";
 		};
 		F7CB3B1A24E59C65007BC3BC /* GrayFilter */ = {
@@ -327,6 +338,7 @@
 				F794391D24E0395F001972B0 /* miao.jpg in Resources */,
 				F7CB3B1F24E5A88C007BC3BC /* ZoomFilter.fsh in Resources */,
 				F7A3079824E2E8B10067CF39 /* HexagonMosaic.fsh in Resources */,
+				F7B722F724E82B5000CF7616 /* VertigoFilter.fsh in Resources */,
 				F794390724E021AE001972B0 /* Assets.xcassets in Resources */,
 				72EEE47024E63AC6007727AB /* ZoomFilter.vsh in Resources */,
 				72EEE46D24E12B16007727AB /* fourSplitScreen.fsh in Resources */,
