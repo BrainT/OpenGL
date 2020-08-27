@@ -46,7 +46,7 @@
 }
 - (void)btnClicked:(UIButton *)btn
 {
-    for (int i = 0; i < 11; i ++) {
+    for (int i = 0; i < 16; i ++) {
         UIButton * button = [self viewWithTag:100 + i];
         if (button.tag == btn.tag) {
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
