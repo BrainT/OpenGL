@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <MetalKit/MetalKit.h>
 #import <MetalPerformanceShaders/MetalPerformanceShaders.h>
-#import <GLKit/GLKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <CoreMedia/CoreMedia.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Renderer : NSObject<MTKViewDelegate,AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface Renderer : NSObject<MTKViewDelegate>
 
 -(nonnull instancetype)initWithMetalKitView:(MTKView *)mtkView;
+
+@property (nonatomic, strong) id<MTLTexture> texture;
 
 @end
 

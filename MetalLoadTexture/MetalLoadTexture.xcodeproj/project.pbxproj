@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7C6F7A324F8113000C2F52F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6F7A224F8113000C2F52F /* AppDelegate.m */; };
-		F7C6F7A624F8113000C2F52F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6F7A524F8113000C2F52F /* ViewController.m */; };
-		F7C6F7A924F8113000C2F52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C6F7A724F8113000C2F52F /* Main.storyboard */; };
-		F7C6F7AB24F8113100C2F52F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C6F7AA24F8113100C2F52F /* Assets.xcassets */; };
-		F7C6F7AE24F8113100C2F52F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C6F7AC24F8113100C2F52F /* LaunchScreen.storyboard */; };
-		F7C6F7B124F8113100C2F52F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6F7B024F8113100C2F52F /* main.m */; };
-		F7C6F7B924F8120900C2F52F /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C6F7B824F8120900C2F52F /* Renderer.m */; };
+		722FF2DC24F7A4F200FB98AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 722FF2DB24F7A4F200FB98AD /* AppDelegate.m */; };
+		722FF2DF24F7A4F200FB98AD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 722FF2DE24F7A4F200FB98AD /* SceneDelegate.m */; };
+		722FF2E224F7A4F200FB98AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722FF2E124F7A4F200FB98AD /* ViewController.m */; };
+		722FF2E524F7A4F200FB98AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722FF2E324F7A4F200FB98AD /* Main.storyboard */; };
+		722FF2E724F7A4F500FB98AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722FF2E624F7A4F500FB98AD /* Assets.xcassets */; };
+		722FF2EA24F7A4F500FB98AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722FF2E824F7A4F500FB98AD /* LaunchScreen.storyboard */; };
+		722FF2ED24F7A4F500FB98AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 722FF2EC24F7A4F500FB98AD /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F7C6F79E24F8113000C2F52F /* MetalRenderCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalRenderCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C6F7A124F8113000C2F52F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F7C6F7A224F8113000C2F52F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F7C6F7A424F8113000C2F52F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F7C6F7A524F8113000C2F52F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F7C6F7A824F8113000C2F52F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F7C6F7AA24F8113100C2F52F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7C6F7AD24F8113100C2F52F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F7C6F7AF24F8113100C2F52F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7C6F7B024F8113100C2F52F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F7C6F7B724F8120900C2F52F /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
-		F7C6F7B824F8120900C2F52F /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		722FF2D724F7A4F200FB98AD /* MetalLoadTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalLoadTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		722FF2DA24F7A4F200FB98AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		722FF2DB24F7A4F200FB98AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		722FF2DD24F7A4F200FB98AD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		722FF2DE24F7A4F200FB98AD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		722FF2E024F7A4F200FB98AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		722FF2E124F7A4F200FB98AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		722FF2E424F7A4F200FB98AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		722FF2E624F7A4F500FB98AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		722FF2E924F7A4F500FB98AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		722FF2EB24F7A4F500FB98AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722FF2EC24F7A4F500FB98AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F7C6F79B24F8113000C2F52F /* Frameworks */ = {
+		722FF2D424F7A4F200FB98AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,75 +42,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F7C6F79524F8113000C2F52F = {
+		722FF2CE24F7A4F200FB98AD = {
 			isa = PBXGroup;
 			children = (
-				F7C6F7A024F8113000C2F52F /* MetalRenderCamera */,
-				F7C6F79F24F8113000C2F52F /* Products */,
+				722FF2D924F7A4F200FB98AD /* MetalLoadTexture */,
+				722FF2D824F7A4F200FB98AD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F7C6F79F24F8113000C2F52F /* Products */ = {
+		722FF2D824F7A4F200FB98AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F7C6F79E24F8113000C2F52F /* MetalRenderCamera.app */,
+				722FF2D724F7A4F200FB98AD /* MetalLoadTexture.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F7C6F7A024F8113000C2F52F /* MetalRenderCamera */ = {
+		722FF2D924F7A4F200FB98AD /* MetalLoadTexture */ = {
 			isa = PBXGroup;
 			children = (
-				F7C6F7A124F8113000C2F52F /* AppDelegate.h */,
-				F7C6F7A224F8113000C2F52F /* AppDelegate.m */,
-				F7C6F7A424F8113000C2F52F /* ViewController.h */,
-				F7C6F7A524F8113000C2F52F /* ViewController.m */,
-				F7C6F7B724F8120900C2F52F /* Renderer.h */,
-				F7C6F7B824F8120900C2F52F /* Renderer.m */,
-				F7C6F7A724F8113000C2F52F /* Main.storyboard */,
-				F7C6F7AA24F8113100C2F52F /* Assets.xcassets */,
-				F7C6F7AC24F8113100C2F52F /* LaunchScreen.storyboard */,
-				F7C6F7AF24F8113100C2F52F /* Info.plist */,
-				F7C6F7B024F8113100C2F52F /* main.m */,
+				722FF2DA24F7A4F200FB98AD /* AppDelegate.h */,
+				722FF2DB24F7A4F200FB98AD /* AppDelegate.m */,
+				722FF2DD24F7A4F200FB98AD /* SceneDelegate.h */,
+				722FF2DE24F7A4F200FB98AD /* SceneDelegate.m */,
+				722FF2E024F7A4F200FB98AD /* ViewController.h */,
+				722FF2E124F7A4F200FB98AD /* ViewController.m */,
+				722FF2E324F7A4F200FB98AD /* Main.storyboard */,
+				722FF2E624F7A4F500FB98AD /* Assets.xcassets */,
+				722FF2E824F7A4F500FB98AD /* LaunchScreen.storyboard */,
+				722FF2EB24F7A4F500FB98AD /* Info.plist */,
+				722FF2EC24F7A4F500FB98AD /* main.m */,
 			);
-			path = MetalRenderCamera;
+			path = MetalLoadTexture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F7C6F79D24F8113000C2F52F /* MetalRenderCamera */ = {
+		722FF2D624F7A4F200FB98AD /* MetalLoadTexture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7C6F7B424F8113100C2F52F /* Build configuration list for PBXNativeTarget "MetalRenderCamera" */;
+			buildConfigurationList = 722FF2F024F7A4F500FB98AD /* Build configuration list for PBXNativeTarget "MetalLoadTexture" */;
 			buildPhases = (
-				F7C6F79A24F8113000C2F52F /* Sources */,
-				F7C6F79B24F8113000C2F52F /* Frameworks */,
-				F7C6F79C24F8113000C2F52F /* Resources */,
+				722FF2D324F7A4F200FB98AD /* Sources */,
+				722FF2D424F7A4F200FB98AD /* Frameworks */,
+				722FF2D524F7A4F200FB98AD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MetalRenderCamera;
-			productName = MetalRenderCamera;
-			productReference = F7C6F79E24F8113000C2F52F /* MetalRenderCamera.app */;
+			name = MetalLoadTexture;
+			productName = MetalLoadTexture;
+			productReference = 722FF2D724F7A4F200FB98AD /* MetalLoadTexture.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F7C6F79624F8113000C2F52F /* Project object */ = {
+		722FF2CF24F7A4F200FB98AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Brain;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = tl;
 				TargetAttributes = {
-					F7C6F79D24F8113000C2F52F = {
-						CreatedOnToolsVersion = 10.1;
+					722FF2D624F7A4F200FB98AD = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
-			buildConfigurationList = F7C6F79924F8113000C2F52F /* Build configuration list for PBXProject "MetalRenderCamera" */;
+			buildConfigurationList = 722FF2D224F7A4F200FB98AD /* Build configuration list for PBXProject "MetalLoadTexture" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,56 +118,56 @@
 				en,
 				Base,
 			);
-			mainGroup = F7C6F79524F8113000C2F52F;
-			productRefGroup = F7C6F79F24F8113000C2F52F /* Products */;
+			mainGroup = 722FF2CE24F7A4F200FB98AD;
+			productRefGroup = 722FF2D824F7A4F200FB98AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F7C6F79D24F8113000C2F52F /* MetalRenderCamera */,
+				722FF2D624F7A4F200FB98AD /* MetalLoadTexture */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F7C6F79C24F8113000C2F52F /* Resources */ = {
+		722FF2D524F7A4F200FB98AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C6F7AE24F8113100C2F52F /* LaunchScreen.storyboard in Resources */,
-				F7C6F7AB24F8113100C2F52F /* Assets.xcassets in Resources */,
-				F7C6F7A924F8113000C2F52F /* Main.storyboard in Resources */,
+				722FF2EA24F7A4F500FB98AD /* LaunchScreen.storyboard in Resources */,
+				722FF2E724F7A4F500FB98AD /* Assets.xcassets in Resources */,
+				722FF2E524F7A4F200FB98AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F7C6F79A24F8113000C2F52F /* Sources */ = {
+		722FF2D324F7A4F200FB98AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C6F7B924F8120900C2F52F /* Renderer.m in Sources */,
-				F7C6F7A624F8113000C2F52F /* ViewController.m in Sources */,
-				F7C6F7B124F8113100C2F52F /* main.m in Sources */,
-				F7C6F7A324F8113000C2F52F /* AppDelegate.m in Sources */,
+				722FF2E224F7A4F200FB98AD /* ViewController.m in Sources */,
+				722FF2DC24F7A4F200FB98AD /* AppDelegate.m in Sources */,
+				722FF2ED24F7A4F500FB98AD /* main.m in Sources */,
+				722FF2DF24F7A4F200FB98AD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F7C6F7A724F8113000C2F52F /* Main.storyboard */ = {
+		722FF2E324F7A4F200FB98AD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F7C6F7A824F8113000C2F52F /* Base */,
+				722FF2E424F7A4F200FB98AD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F7C6F7AC24F8113100C2F52F /* LaunchScreen.storyboard */ = {
+		722FF2E824F7A4F500FB98AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F7C6F7AD24F8113100C2F52F /* Base */,
+				722FF2E924F7A4F500FB98AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F7C6F7B224F8113100C2F52F /* Debug */ = {
+		722FF2EE24F7A4F500FB98AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +207,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -226,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -234,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		F7C6F7B324F8113100C2F52F /* Release */ = {
+		722FF2EF24F7A4F500FB98AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +265,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -279,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,35 +285,35 @@
 			};
 			name = Release;
 		};
-		F7C6F7B524F8113100C2F52F /* Debug */ = {
+		722FF2F124F7A4F500FB98AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCPSAMPQW8;
-				INFOPLIST_FILE = MetalRenderCamera/Info.plist;
+				INFOPLIST_FILE = MetalLoadTexture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tl.MetalRenderCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tl.MetalLoadTexture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F7C6F7B624F8113100C2F52F /* Release */ = {
+		722FF2F224F7A4F500FB98AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCPSAMPQW8;
-				INFOPLIST_FILE = MetalRenderCamera/Info.plist;
+				INFOPLIST_FILE = MetalLoadTexture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tl.MetalRenderCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tl.MetalLoadTexture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7C6F79924F8113000C2F52F /* Build configuration list for PBXProject "MetalRenderCamera" */ = {
+		722FF2D224F7A4F200FB98AD /* Build configuration list for PBXProject "MetalLoadTexture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7C6F7B224F8113100C2F52F /* Debug */,
-				F7C6F7B324F8113100C2F52F /* Release */,
+				722FF2EE24F7A4F500FB98AD /* Debug */,
+				722FF2EF24F7A4F500FB98AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7C6F7B424F8113100C2F52F /* Build configuration list for PBXNativeTarget "MetalRenderCamera" */ = {
+		722FF2F024F7A4F500FB98AD /* Build configuration list for PBXNativeTarget "MetalLoadTexture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7C6F7B524F8113100C2F52F /* Debug */,
-				F7C6F7B624F8113100C2F52F /* Release */,
+				722FF2F124F7A4F500FB98AD /* Debug */,
+				722FF2F224F7A4F500FB98AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F7C6F79624F8113000C2F52F /* Project object */;
+	rootObject = 722FF2CF24F7A4F200FB98AD /* Project object */;
 }

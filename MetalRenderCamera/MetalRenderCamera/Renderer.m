@@ -11,20 +11,11 @@
 @interface Renderer()
 
 //纹理
-@property (nonatomic, strong) id<MTLTexture> texture;
+
 @property (nonatomic, strong) id<MTLDevice> device;
 @property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
 
-//负责输入和输出设备之间的数据传递
-@property (nonatomic, strong) AVCaptureSession *mCaptureSession;
-//负责从AVCaptureDevice获得输入数据
-@property (nonatomic, strong) AVCaptureDeviceInput *mCaptureDeviceInput;
-//输出设备
-@property (nonatomic, strong) AVCaptureVideoDataOutput *mCaptureDeviceOutput;
-//处理队列
-@property (nonatomic, strong) dispatch_queue_t mProcessQueue;
-//纹理缓存区
-@property (nonatomic, assign) CVMetalTextureCacheRef textureCache;
+
 //命令队列
 
 @end
@@ -52,40 +43,30 @@
 
 //视图渲染则会调用此方法
 - (void)drawInMTKView:(MTKView *)view {
-    MTKView * mtkView = view;
-    //1.判断是否获取了AVFoundation 采集的纹理数据
+    
     if (self.texture) {
         
-        //2.创建指令缓冲
+        // 创建指令缓存
         id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
         
-        //3.将MTKView 作为目标渲染纹理
-        id<MTLTexture> drawingTexture = mtkView.currentDrawable.texture;
+        // 将MTKView作为渲染目标
+        id<MTLTexture> drawingTexture = view.currentDrawable.texture;
         
-        //4.设置滤镜
-        /*
-         MetalPerformanceShaders是Metal的一个集成库，有一些滤镜处理的Metal实现;
-         MPSImageGaussianBlur 高斯模糊处理;
-         */
-
-        //创建高斯滤镜处理filter
-        //注意:sigma值可以修改，sigma值越高图像越模糊;
-        MPSImageGaussianBlur *filter = [[MPSImageGaussianBlur alloc] initWithDevice:view.device sigma:1];
-        
-        //5.MPSImageGaussianBlur以一个Metal纹理作为输入，以一个Metal纹理作为输出；
-        //输入:摄像头采集的图像 self.texture
-        //输出:创建的纹理 drawingTexture(其实就是view.currentDrawable.texture)
+        // 可以再这里处理滤镜逻辑;
+        //MetalPerformanceShaders是Metal的一个滤镜集成库
+        //MPSImageGaussianBlur 高斯模糊处理;sigma:值越高越模糊
+        MPSImageGaussianBlur * filter = [[MPSImageGaussianBlur alloc] initWithDevice:self.device sigma:1];
+        // 对采集到的输入的纹理做处理，输出到渲染目标
         [filter encodeToCommandBuffer:commandBuffer sourceTexture:self.texture destinationTexture:drawingTexture];
         
-        //6.展示显示的内容
+        // 显示纹理
         [commandBuffer presentDrawable:view.currentDrawable];
-        
-        //7.提交命令
+        // 提交命令
         [commandBuffer commit];
-        
-        //8.清空当前纹理,准备下一次的纹理数据读取.
+        // 清空当前纹理准备下次的数据读取
         self.texture = NULL;
     }
+    
 }
 
 
